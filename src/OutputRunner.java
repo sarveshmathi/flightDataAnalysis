@@ -8,7 +8,7 @@ public class OutputRunner {
 
 	public static void main(String[] args) {
 		long startTime = System.nanoTime();
-		CSVReader cr = new CSVReader("flights.csv");
+		CSVReader cr = new CSVReader("flights_small.csv");
 		FlightDataProcessor fp = new FlightDataProcessor(cr.getAllLines());
 		FormattedOutput fo = new FormattedOutput();
 		fo.addAnswer(1, fp.highestPercentageOfCancelledFlights());
